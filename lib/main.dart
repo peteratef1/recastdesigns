@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_recast/theme.dart' as AppTheme;
+import 'package:flutter_application_recast/theme.dart' as apptheme;
 import 'screens/home_screen.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class AlterNowApp extends StatelessWidget {
     return MaterialApp(
       title: 'AlterNow',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.darkTheme,
+      theme: apptheme.AppTheme.darkTheme,
       home: const HomeScreen(),
     );
   }
