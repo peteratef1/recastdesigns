@@ -105,34 +105,10 @@ class AppColors {
   static const Color textPrimary = Color(0xFFFFFFFF);
   static const Color textSecondary = Color(0xFF8A8A8A);
   static const Color secondBackground = Color(0xFF323232);
-
+  static const Color secondaryColor = Color(0xFFE4B679);
   static const Color textMuted = Color(0xFF5A5A5A);
   static const Color progressBackground = Color(0xFF2A2A2A);
   static const Color border = Color(0xFF2E2E2E);
   static const Color creditsChip = Color(0xFFF0D898);
   static const Color textColor = Color(0xFFFEE5C4);
-}
-
-class AppTheme {
-  static ThemeData get darkTheme {
-    return ThemeData(
-      brightness: Brightness.dark,
-      scaffoldBackgroundColor: AppColors.background,
-      fontFamily: 'SF Pro Display',
-      colorScheme: const ColorScheme.dark(
-        surface: AppColors.surface,
-        primary: AppColors.gold,
-      ),
-      appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.background,
-        elevation: 0,
-        iconTheme: IconThemeData(color: AppColors.white),
-        titleTextStyle: TextStyle(
-          color: AppColors.white,
-          fontSize: 28,
-          fontWeight: FontWeight.w700,
-        ),
-      ),
-    );
-  }
 }

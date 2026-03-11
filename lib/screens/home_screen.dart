@@ -20,8 +20,6 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 20),
-
-                // Header
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -29,46 +27,54 @@ class HomeScreen extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'Welcome Back,',
-                          style: TextStyle(
-                            color: AppColors.textSecondary,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: "Satoshi",
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            'Welcome Back,',
+                            style: TextStyle(
+                              color: AppColors.textSecondary,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
                         ),
                         const SizedBox(height: 2),
-                        GradientText(
-                          "Asmar Ajlouni",
-                          style: AppTextStyles.venueTitle,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 8.0),
+                          child: GradientText(
+                            "Asmar Ajlouni",
+                            style: AppTextStyles.venueTitle,
+                          ),
                         ),
                       ],
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const ProfileScreen(),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 16.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const ProfileScreen(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          width: 46,
+                          height: 46,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: AppColors.surface,
+                            border: Border.all(
+                              color: AppColors.border,
+                              width: 1.5,
+                            ),
                           ),
-                        );
-                      },
-                      child: Container(
-                        width: 46,
-                        height: 46,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: AppColors.surface,
-                          border: Border.all(
-                            color: AppColors.border,
-                            width: 1.5,
+                          child: const Icon(
+                            Icons.person_rounded,
+                            color: AppColors.white,
+                            size: 24,
                           ),
-                        ),
-                        child: const Icon(
-                          Icons.person,
-                          color: AppColors.white,
-                          size: 24,
                         ),
                       ),
                     ),
@@ -83,9 +89,9 @@ class HomeScreen extends StatelessWidget {
                   totalOrders: 24,
                   progressValue: 0.62,
                   recentFoodImages: const [
-                    'assets/food1.png',
-                    'assets/food2.png',
-                    'assets/food3.png',
+                    'assets/1.png',
+                    'assets/2.png',
+                    'assets/3.png',
                   ],
                   onMoreDetails: () {
                     Navigator.push(
@@ -98,14 +104,17 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 28),
 
                 // Venue Selection header
-                const Text(
-                  'Venue Selection',
-                  style: TextStyle(
-                    color: AppColors.white,
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0),
+                  child: Text(
+                    'Venue Selection',
+                    style: TextStyle(
+                      color: AppColors.white.withValues(alpha: 0.87),
 
-                    fontSize: 22,
-                    fontWeight: FontWeight.w100,
-                    letterSpacing: -0.3,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w100,
+                      letterSpacing: -0.3,
+                    ),
                   ),
                 ),
 

@@ -55,27 +55,27 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () => Navigator.pop(context),
-                    child: const Icon(
+                    child: Icon(
                       Icons.arrow_back_ios_new,
-                      color: AppColors.white,
+                      color: AppColors.white.withValues(alpha: 0.75),
                       size: 20,
                     ),
                   ),
-                  const Text(
+                  Text(
                     'Your Profile',
                     style: TextStyle(
-                      color: AppColors.white,
-                      fontSize: 26,
+                      color: AppColors.white.withValues(alpha: 0.75),
+                      fontSize: 20,
                       fontWeight: FontWeight.w700,
                       letterSpacing: -0.5,
                     ),
                   ),
                   GestureDetector(
                     onTap: () {},
-                    child: const Icon(
+                    child: Icon(
                       Icons.settings_outlined,
-                      color: AppColors.white,
-                      size: 26,
+                      color: AppColors.white.withValues(alpha: 0.71),
+                      size: 22,
                     ),
                   ),
                 ],
@@ -133,7 +133,6 @@ class ProfileScreen extends StatelessWidget {
                                 const Text(
                                   'Asmar Ajlouni',
                                   style: TextStyle(
-                                    fontFamily: "Satoshi",
                                     color: AppColors.white,
                                     fontSize: 18,
                                     fontWeight: FontWeight.w700,
@@ -143,9 +142,9 @@ class ProfileScreen extends StatelessWidget {
                                 const Text(
                                   '+962 234 567 2349',
                                   style: TextStyle(
-                                    color: AppColors.gold,
+                                    color: AppColors.secondaryColor,
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w400,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ],
@@ -170,14 +169,16 @@ class ProfileScreen extends StatelessWidget {
                       const SizedBox(height: 32),
 
                       // Loyalty History heading
-                      const Text(
-                        'Loyalty History',
-                        style: TextStyle(
-                          fontFamily: "Satoshi",
-                          color: AppColors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: -0.3,
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(8.0, 0, 8.0, 0),
+                        child: Text(
+                          'Loyalty History',
+                          style: TextStyle(
+                            color: AppColors.white.withValues(alpha: 0.82),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.5,
+                          ),
                         ),
                       ),
 

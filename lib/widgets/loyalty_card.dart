@@ -64,7 +64,7 @@ class LoyaltyCard extends StatelessWidget {
                   border: Border.all(color: AppColors.white, width: 1.5),
                 ),
                 child: Icon(
-                  Icons.person_outline,
+                  Icons.person_rounded,
                   color: AppColors.white,
                   size: 22,
                 ),
@@ -119,7 +119,7 @@ class LoyaltyCard extends StatelessWidget {
 
           // Total Orders row
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+            padding: const EdgeInsets.fromLTRB(5, 6, 12, 3),
 
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -147,7 +147,6 @@ class LoyaltyCard extends StatelessWidget {
 
           const SizedBox(height: 14),
 
-          // Bottom row: food images + more details
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -158,9 +157,10 @@ class LoyaltyCard extends StatelessWidget {
                         margin: const EdgeInsets.only(right: 6),
                         width: 44,
                         height: 44,
+                        padding: const EdgeInsets.all(2),
                         decoration: BoxDecoration(
+                          color: Colors.black,
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: AppColors.border, width: 1),
                         ),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(9),
@@ -184,29 +184,30 @@ class LoyaltyCard extends StatelessWidget {
               GestureDetector(
                 onTap: onMoreDetails,
                 child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 9,
-                  ),
+                  width: 100,
+                  height: 27,
                   decoration: BoxDecoration(
                     border: Border.all(color: AppColors.white, width: 1),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(13.5),
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'More details',
                         style: TextStyle(
                           color: AppColors.white,
-                          fontSize: 13,
-                          fontFamily: "satoshi",
+                          fontSize: 10.5,
+                          fontWeight: FontWeight.w500,
+                          height: 1.3,
+                          letterSpacing: -0.32,
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      const SizedBox(width: 3),
                       Icon(
                         Icons.arrow_forward,
                         color: AppColors.white,
-                        size: 14,
+                        size: 9,
                       ),
                     ],
                   ),

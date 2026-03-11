@@ -22,7 +22,8 @@ class AlterNowApp extends StatelessWidget {
     return MaterialApp(
       title: 'AlterNow',
       debugShowCheckedModeBanner: false,
-      theme: apptheme.AppTheme.darkTheme,
+      debugShowMaterialGrid: false,
+      theme: apptheme.darkTheme,
       home: const HomeScreen(),
     );
   }

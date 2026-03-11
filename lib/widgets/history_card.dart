@@ -38,22 +38,24 @@ class HistoryCard extends StatelessWidget {
             Container(
               width: 53,
               height: 52,
-              padding: const EdgeInsets.all(6),
+              padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 11),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                color: AppColors.background, // black background
+                color: AppColors.background,
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(6),
                 child: Image.asset(
                   imagePath,
+                  width: 34,
+                  height: 30,
                   fit: BoxFit.contain,
                   errorBuilder:
                       (c, e, s) => Center(
                         child: Icon(
                           Icons.restaurant,
                           color: AppColors.gold,
-                          size: 28,
+                          size: 24,
                         ),
                       ),
                 ),
@@ -84,12 +86,12 @@ class HistoryCard extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 10),
                   Text(
                     '$amount • $creditsSpent Credits',
                     style: TextStyle(
                       fontSize: 12,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.bold,
                       foreground:
                           Paint()
                             ..shader = const LinearGradient(
@@ -126,7 +128,6 @@ class HistoryCard extends StatelessWidget {
                       color: Colors.black,
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
-                      fontFamily: "Satoshi",
                     ),
                   ),
                 ),

@@ -87,7 +87,6 @@ class VenueCard extends StatelessWidget {
                               fontSize: 10,
                               fontWeight: FontWeight.w400,
                               letterSpacing: 0.3,
-                              fontFamily: "Satoshi",
                             ),
                           ),
 
